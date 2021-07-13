@@ -13,12 +13,12 @@ import DateFnsUtils from '@date-io/date-fns'
 import moment from 'moment'
 
 class PickersFlint extends PureComponent {
-    static defaultProps = {}
+    constructor(props) {
+        super(props)
 
-    static propTypes = {}
-
-    state = {
-        selectedDate: new Date('2014-08-18T21:11:54')
+        this.state = { selectedDate: new Date('2014-08-18T21:11:54') }
+        this.handleDateChange = this.handleDateChange.bind(this)
+        this.handleDateChangeMoment = this.handleDateChangeMoment.bind(this)
     }
 
     handleDateChange = date => {
@@ -35,7 +35,7 @@ class PickersFlint extends PureComponent {
 
     render () {
         const { selectedDate } = this.state
-        const selectedDateMomentWrapper = moment(selectedDate)
+        const selectedDateMoment = moment(selectedDate)
 
         return (
             <>
@@ -56,13 +56,13 @@ class PickersFlint extends PureComponent {
                         <DatePicker
                             dataBi="bi123"
                             label="Flint Date picker"
-                            value={selectedDateMomentWrapper}
+                            value={selectedDateMoment}
                             onChange={this.handleDateChangeMoment}
                         />
                         <TimePicker
                             label="Flint Time picker"
                             timePickerId="time-picker"
-                            value={selectedDateMomentWrapper}
+                            value={selectedDateMoment}
                             onChange={this.handleDateChangeMoment}
                         />
                     </Grid>

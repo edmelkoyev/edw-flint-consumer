@@ -9,13 +9,13 @@ import {
   } from '@material-ui/pickers'
 
 class PickersMui extends PureComponent {
-    static defaultProps = {}
+    constructor(props) {
+        super(props)
 
-    static propTypes = {}
-
-    state = {
-        selectedDate: new Date('2014-08-18T21:11:54')
+        this.state = { cselectedDate: new Date('2014-08-18T21:11:54') };
+        this.handleDateChange = this.handleDateChange.bind(this);
     }
+
 
     handleDateChange = date => {
         this.setState(() => ({
