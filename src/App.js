@@ -5,7 +5,7 @@ import PickersFlint from './PickersFlint'
 function App() {
   return (
     <>
-      <AppBar position="static" color="secondary">
+      <AppBar position="static" color="primary">
         <Typography variant="h1">NWP Flint Consumer</Typography>
       </AppBar>
       <Box p={2}>

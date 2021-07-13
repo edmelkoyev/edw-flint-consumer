@@ -9,11 +9,11 @@ import {
   } from '@material-ui/pickers'
 
 class PickersMui extends PureComponent {
-    constructor(props) {
+    constructor (props) {
         super(props)
 
-        this.state = { cselectedDate: new Date('2014-08-18T21:11:54') };
-        this.handleDateChange = this.handleDateChange.bind(this);
+        this.state = { cselectedDate: new Date('2014-08-18T21:11:54') }
+        this.handleDateChange = this.handleDateChange.bind(this)
     }
 
 

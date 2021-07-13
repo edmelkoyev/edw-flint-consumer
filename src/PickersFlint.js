@@ -13,7 +13,7 @@ import DateFnsUtils from '@date-io/date-fns'
 import moment from 'moment'
 
 class PickersFlint extends PureComponent {
-    constructor(props) {
+    constructor (props) {
         super(props)
 
         this.state = { selectedDate: new Date('2014-08-18T21:11:54') }
