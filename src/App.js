@@ -8,13 +8,17 @@ function App() {
       <AppBar position="static" color="secondary">
         <Typography variant="h1">NWP Flint Consumer</Typography>
       </AppBar>
-      <Box p={1}>
-        <Paper>
+      <Box p={2}>
+        <Paper elevation={3}>
           <Box p={2}>
             <Typography variant="h2">MUI Pickers</Typography>
             <PickersMui />
           </Box>
-          <Box px={2} pt={10} pb={2}>
+        </Paper>
+      </Box>
+      <Box p={2}>
+        <Paper elevation={3}>
+          <Box p={2}>
             <Typography variant="h2">@wiley-flint Pickers</Typography>
             <PickersFlint />
           </Box>

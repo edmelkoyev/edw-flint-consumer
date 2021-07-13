@@ -1,6 +1,6 @@
 import 'date-fns'
 import React, { PureComponent } from 'react'
-import { Box, Grid, Paper } from '@material-ui/core'
+import { Box, Grid, Paper, Typography } from '@material-ui/core'
 import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
@@ -68,7 +68,9 @@ class PickersFlint extends PureComponent {
                     </Grid>
                 </MuiPickersUtilsProvider>
                 <Paper>
-                    <Box p={2}>{`Result date: ${selectedDate}`}</Box>
+                    <Box p={2}>
+                        <Typography variant="body1">{`Result date: ${selectedDate}`}</Typography>
+                    </Box>
                 </Paper>
             </>
         )
